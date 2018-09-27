@@ -1,12 +1,12 @@
 server:
   port: 8082
 
-spring:
-  #mysql
-  datasource:
-    url: jdbc:mysql://rm-t4nf8xk5m73o2i516io.mysql.singapore.rds.aliyuncs.com:3306/quantitative_trading?useUnicode=true&characterEncoding=UTF-8&useSSL=false
-    #内网
-#    url: jdbc:mysql://rm-t4nf8xk5m73o2i516.mysql.singapore.rds.aliyuncs.com:3306/quantitative_trading?useUnicode=true&characterEncoding=UTF-8&useSSL=false
-    username: pgrab
-    password: Pgrab123
-    driver-class-name: com.mysql.cj.jdbc.Driver
+#spring:
+#  #mysql
+#  datasource:
+#    url: jdbc:mysql://rm-t4nf8xk5m73o2i516io.mysql.singapore.rds.aliyuncs.com:3306/quantitative_trading?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+#    #内网
+##    url: jdbc:mysql://rm-t4nf8xk5m73o2i516.mysql.singapore.rds.aliyuncs.com:3306/quantitative_trading?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+#    username: pgrab
+#    password: Pgrab123
+#    driver-class-name: com.mysql.cj.jdbc.Driver
