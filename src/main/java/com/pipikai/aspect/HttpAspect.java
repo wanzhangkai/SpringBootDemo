@@ -46,7 +46,7 @@ public class HttpAspect {
 
     @AfterReturning(pointcut = "log()", returning = "o")
     public void doAferReturning(Object o) {
-        log.info("response= {}", o);
+        log.info("response= {}", o.toString());
     }
 
 }

@@ -1,9 +1,9 @@
 package com.pipikai.controller;
 
-import com.mysql.jdbc.util.ResultSetUtil;
-import com.pipikai.domain.HttpResult;
-import com.pipikai.domain.Test;
+import com.pipikai.domain.TestObject;
 import com.pipikai.repository.TestRepository;
+import com.pipikai.service.TestService;
+import com.pipikai.utils.HttpResultUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.BindingResult;
@@ -23,6 +23,9 @@ public class TestController {
     @Autowired
     TestRepository testRepository;
 
+    @Autowired
+    TestService testService;
+
     @GetMapping(value = "/hello")
     public String test() {
         log.info("Hello Test Succuss");
@@ -36,18 +39,21 @@ public class TestController {
     }
 
     @PostMapping(value = "/setTest")
-    public Object getTestList(@Valid Test test, BindingResult bindingResult) {
+    public Object getTestList(@Valid TestObject testObject, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
-            HttpResult result = new HttpResult();
-            result.setCode(1);
-            result.setMsg(bindingResult.getFieldError().getDefaultMessage());
-            return result;
+            return HttpResultUtil.error(1, bindingResult.getFieldError().getDefaultMessage());
         }
-        HttpResult result = new HttpResult();
-        result.setCode(0);
-        result.setMsg("成功");
-        result.setData(testRepository.save(test));
-        return  result;
+        return HttpResultUtil.success(testRepository.save(testObject));
+    }
+
+    @GetMapping(value = "/getTest/{id}")
+    public Object getTest(@PathVariable("id") Integer id, TestObject testObject) throws Exception {
+        return testService.getTest(id);
+    }
+
+    @GetMapping(value = "/findOne/{id}")
+    public Object findOne(@PathVariable("id") Integer id, TestObject testObject) throws Exception {
+        return testService.findOne(id);
     }
 
 }
