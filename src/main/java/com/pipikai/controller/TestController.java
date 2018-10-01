@@ -10,6 +10,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.io.*;
 
 /**
  * @author wanzhangkai@foxmail.com
@@ -56,41 +57,16 @@ public class TestController {
         return testService.findOne(id);
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         TestObject testObject1 = new TestObject();
         TestObject testObject2 = new TestObject();
-        System.out.println(testObject1 instanceof Object);
+//        System.out.println(testObject1 instanceof Object);
         Class c = null;
         try {
             c = Class.forName("com.pipikai.domain.TestObject");
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
-        System.out.println(c == testObject1.getClass());
-
-        try {
-            TestObject testObject3 = (TestObject) c.newInstance();
-            System.out.println(testObject3);
-        } catch (InstantiationException e) {
-            e.printStackTrace();
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-        }
-
-        Class c2 = void.class;
-        Class c3 = Double.class;
-        Class c4 = double.class;
-        if (c3.getSimpleName().equals("Double")) {
-            System.out.println(c3.getSimpleName());
-        }
-        TestController testController = new TestController();
-        System.out.println(testController);
-        System.out.println(testController.getCla());
-        System.out.println(testController == testController.getCla());
-    }
-
-    public TestController getCla() {
-        return this;
     }
 
 }
