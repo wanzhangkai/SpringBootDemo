@@ -5,8 +5,8 @@ spring:
   #mysql
   datasource:
     url: jdbc:mysql://rm-t4nf8xk5m73o2i516io.mysql.singapore.rds.aliyuncs.com:3306/test?useUnicode=true&characterEncoding=UTF-8&useSSL=false
-    username: pgrab
-    password: Pgrab123
+    username:
+    password:
     driver-class-name: com.mysql.jdbc.Driver
   jpa:
       hibernate:
