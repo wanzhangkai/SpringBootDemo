@@ -13,7 +13,6 @@ public class UDPClient {
 
     public static void main(String[] args) throws IOException {
 
-
         try (DatagramSocket socket = new DatagramSocket()) {
             //发送请求
             InetAddress addresses = InetAddress.getByName("localhost");
