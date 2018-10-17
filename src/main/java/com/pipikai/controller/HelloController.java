@@ -10,10 +10,10 @@ import org.springframework.web.bind.annotation.*;
  */
 @RestController
 @Slf4j
-@RequestMapping(value = "/test")
+@RequestMapping(value = "/hello")
 public class HelloController {
 
-    @GetMapping(value = "/hello")
+    @GetMapping()
     public String test() {
         log.info("Hello Test Succuss");
         System.out.println("PostConstruct");

@@ -1,24 +1,23 @@
 package com.pipikai.demo.annotationDemo;
 
+import lombok.extern.slf4j.Slf4j;
+import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
-import org.aspectj.lang.annotation.Around;
-import org.aspectj.lang.annotation.Aspect;
-import org.aspectj.lang.annotation.Pointcut;
+import org.aspectj.lang.annotation.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Aspect
 @Service
+@Slf4j
 public class TokenCheckAspect {
 
-    @Autowired
-    TokenTest tokenTest;
-
+    //    @Pointcut("execution(public * com.pipikai.demo.annotationDemo.TokenTest.test(..))")
     @Pointcut("@annotation(com.pipikai.demo.annotationDemo.TokenCheck)")
-    public void service() {
+    public void handle() {
     }
 
-    @Around("service()")
+    @Around("handle()")
     public Object tokenCheck(ProceedingJoinPoint pjp) throws Throwable {
         System.out.println("handle()");
         Object[] args = pjp.getArgs();
@@ -32,16 +31,8 @@ public class TokenCheckAspect {
         args[1] = (String) arg0 + arg1;
 
         Object ret = pjp.proceed(args);
-        System.out.println("handle()2");
+        System.out.println("AfterHandle()");
         return ret;
-
-//        if (userId == null)
-//            System.out.println("");
-//        User user = args[1] == null ? new User() : (User) args[1];
-//        user.setId(userId);
-//        args[1] = user;
-//        Object retVal = pjp.proceed(args);
-//        return retVal;
     }
 
 }

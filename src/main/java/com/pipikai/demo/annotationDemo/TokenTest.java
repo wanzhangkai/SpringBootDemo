@@ -11,12 +11,12 @@ public class TokenTest {
     @Autowired
     TokenCheckAspect tokenCheckAspect;
 
-    @PostConstruct
-    public void init() {
-        System.out.println("PostConstruct");
-        test("wan", "zhangkai");
-        System.out.println("AfterPostConstruct");
-    }
+//    @PostConstruct
+//    public void init() {
+//        System.out.println("PostConstruct");
+//        test("wan", "zhangkai");
+//        System.out.println("AfterPostConstruct");
+//    }
 
     @TokenCheck
     public void test(String str1, String str2) {
