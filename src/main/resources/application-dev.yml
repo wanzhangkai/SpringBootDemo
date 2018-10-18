@@ -12,3 +12,10 @@ spring:
       hibernate:
         ddl-auto: update
       show-sql: true
+
+mybatis:
+  config-location: classpath:mybatis-config.xml
+  type-aliases-package: com.pipikai.domain
+  mapper-locations: classpath:mappers/*.xml
+#  type-handlers-package: com.pipikai.dao
+

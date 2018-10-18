@@ -62,7 +62,8 @@ public class TestController {
 
     @GetMapping(value = "/findOne/{id}")
     public Object findOne(@PathVariable("id") Integer id, TestObject testObject) throws Exception {
-        return testService.findOne(id);
+//        return testService.findOne(id);
+        return null;
     }
 
     public static void main(String[] args) throws IOException {

@@ -17,8 +17,8 @@ public class TestService {
     @Autowired
     TestRepository testRepository;
 
-    @Autowired
-    TestDao testDao;
+//    @Autowired
+//    TestDao testDao;
 
     public Object getTest(Integer id) throws Exception {
         Optional<TestObject> test = testRepository.findById(id);
@@ -32,9 +32,9 @@ public class TestService {
         }
     }
 
-    public TestObject findOne(Integer id) {
-        return testDao.getTestObject(id);
-    }
+//    public TestObject findOne(Integer id) {
+//        return testDao.getTestObject(id);
+//    }
 
 }
 
