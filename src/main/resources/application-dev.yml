@@ -15,7 +15,7 @@ spring:
 
 mybatis:
   config-location: classpath:mybatis-config.xml
-  type-aliases-package: com.pipikai.domain
   mapper-locations: classpath:mappers/*.xml
-#  type-handlers-package: com.pipikai.dao
+#  type-aliases-package: com.pipikai.domain
+
 
