@@ -1,5 +1,7 @@
 server:
   port: 8082
+  servlet:
+    context-path: /kai
 
 spring:
   #mysql
@@ -17,5 +19,3 @@ mybatis:
   config-location: classpath:mybatis-config.xml
   mapper-locations: classpath:mappers/*.xml
 #  type-aliases-package: com.pipikai.domain
-
-

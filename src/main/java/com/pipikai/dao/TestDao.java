@@ -6,5 +6,4 @@ public interface TestDao {
 
     TestObject getTestObject(Integer id);
 
-
 }

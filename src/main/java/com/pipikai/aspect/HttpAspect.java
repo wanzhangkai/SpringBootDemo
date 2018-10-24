@@ -38,7 +38,8 @@ public class HttpAspect {
         //ip
         log.info("ip={}", request.getRemoteAddr());
         //类方法
-        log.info("class_method={}", joinPoint.getSignature().getDeclaringTypeName() + "." + joinPoint.getSignature().getName());
+        log.info("class_method={}", joinPoint.getSignature().getDeclaringTypeName() + "." + joinPoint.getSignature()
+                .getName());
         //参数
         log.info("args={}", joinPoint.getArgs());
     }
