@@ -83,6 +83,7 @@
         <!--<table tableName="mmall_user" domainObjectName="User" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>-->
 
         <table tableName="test_object" domainObjectName="TestObject" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+        <!--test-->
 
         <!--mybatis插件的搭建 -->
     </context>
