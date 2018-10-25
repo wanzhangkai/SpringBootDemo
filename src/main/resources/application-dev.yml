@@ -16,6 +16,23 @@ spring:
       show-sql: true
 
 mybatis:
-  config-location: classpath:mybatis-config.xml
-  mapper-locations: classpath:mappers/*.xml
+  mapper-locations: classpath:mapper/*.xml
+#  config-location: classpath:mybatis-config.xml
 #  type-aliases-package: com.pipikai.domain
+  configuration:
+    #使用jdbc的getGeneratedKeys获取数据库自增主键值
+    use-generated-keys: true
+    #使用列标签替换列别名 默认：true
+    use-column-label: true
+    #开启驼峰命名转换：Table(create_time) -> Entity(createTime)
+    map-underscore-to-camel-case: true
+#mapper:
+#    mapper:
+#        - tk.mybatis.springboot.util.MyMapper
+#    not-empty: false
+#    identity: MYSQL
+#pagehelper:
+#    helperDialect: mysql
+#    reasonable: true
+#    supportMethodsArguments: true
+#    params: count=countSql
