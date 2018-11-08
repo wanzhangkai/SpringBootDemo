@@ -8,17 +8,13 @@ spring:
   datasource:
     url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=UTF-8&useSSL=false
     username: root
-    password: kaige520
+    password: 123456
     driver-class-name: com.mysql.jdbc.Driver
-  jpa:
-      hibernate:
-        ddl-auto: update
-      show-sql: true
 
 mybatis:
   mapper-locations: classpath:mapper/*.xml
-#  config-location: classpath:mybatis-config.xml
-#  type-aliases-package: com.pipikai.domain
+  #  config-location: classpath:mybatis-config.xml
+  #  type-aliases-package: com.pipikai.domain
   configuration:
     #使用jdbc的getGeneratedKeys获取数据库自增主键值
     use-generated-keys: true

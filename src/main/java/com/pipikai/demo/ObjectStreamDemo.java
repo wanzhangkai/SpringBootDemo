@@ -1,6 +1,6 @@
 package com.pipikai.demo;
 
-import com.pipikai.domain.TestObject;
+import com.pipikai.pojo.TestObject;
 
 import java.io.*;
 
@@ -25,7 +25,7 @@ public class ObjectStreamDemo {
         oos.writeObject(testObject);
         oos.flush();
         oos.close();
-
+        
         ObjectInputStream ois = new ObjectInputStream(
                 new FileInputStream(file)
         );

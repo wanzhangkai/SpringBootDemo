@@ -2,8 +2,7 @@ package com.pipikai.controller;
 
 import com.pipikai.aspect.IpCheck;
 import com.pipikai.demo.annotationDemo.TokenTest;
-import com.pipikai.domain.TestObject;
-import com.pipikai.repository.TestRepository;
+import com.pipikai.pojo.TestObject;
 import com.pipikai.service.TestService;
 import com.pipikai.utils.HttpResultUtil;
 import lombok.extern.slf4j.Slf4j;
@@ -23,8 +22,6 @@ import java.io.*;
 @RequestMapping(value = "/test")
 public class TestController {
 
-    @Autowired
-    TestRepository testRepository;
 
     @Autowired
     TestService testService;
@@ -51,7 +48,7 @@ public class TestController {
         if (bindingResult.hasErrors()) {
             return HttpResultUtil.error(1, bindingResult.getFieldError().getDefaultMessage());
         }
-        return HttpResultUtil.success(testRepository.save(testObject));
+        return HttpResultUtil.success();
     }
 
     @GetMapping(value = "/getTest/{id}")
