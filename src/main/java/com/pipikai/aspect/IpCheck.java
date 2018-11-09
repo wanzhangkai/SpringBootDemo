@@ -9,8 +9,8 @@ import java.lang.annotation.Target;
  * 注解+AOP demo
  * 对注解进行AOP
  */
-@Target(value = {ElementType.METHOD})
+@Target(ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)
 public @interface IpCheck {
-//    String value() default "1";
+    String value() default "1";
 }
