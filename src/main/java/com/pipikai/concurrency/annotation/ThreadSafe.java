@@ -6,7 +6,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * 标识注解：标识{线程安全的}
+ * 标识注解：标识 {线程安全的}
  *
  * @Author: wanzhangkai
  * @Email: zhangkaiwan@qq.com
