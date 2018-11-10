@@ -1,33 +1,34 @@
-package com.pipikai.concurrency.example;
+package com.pipikai.concurrency.atomic;
 
-import com.pipikai.concurrency.annotation.NotThreadSafe;
 import com.pipikai.concurrency.annotation.ThreadSafe;
+import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Semaphore;
-import java.util.concurrent.atomic.AtomicInteger;
+import java.util.concurrent.atomic.AtomicBoolean;
+import java.util.concurrent.atomic.AtomicIntegerFieldUpdater;
 
 /**
- * 代码模拟并发：
- * CountDownLatch 和 Semaphore的使用
- * 使用原子类AtomicInteger来保证并发
+ * AtomicBoolean类的使用
+ * 只会执行一次
  *
  * @Author: wanzhangkai
  * @Email: zhangkaiwan@qq.com
- * @Date: 2018/11/9 21:37
+ * @Date: 2018/11/10 11:34
  */
 @Slf4j
 @ThreadSafe
-public class CountExample2 {
+public class AtomicExample3 {
 
     public static int clientTolal = 5000;
 
     public static int threadTotal = 200;
 
-    public static AtomicInteger count = new AtomicInteger(0);
+    public static AtomicBoolean count = new AtomicBoolean(false);
+
 
     public static void main(String[] args) throws InterruptedException {
         ExecutorService executorService = Executors.newCachedThreadPool();
@@ -37,7 +38,7 @@ public class CountExample2 {
             executorService.execute(() -> {
                 try {
                     semaphore.acquire();
-                    add();
+                    test();
                     semaphore.release();
                 } catch (Exception e) {
                     log.error("exception", e);
@@ -47,12 +48,13 @@ public class CountExample2 {
         }
         countDownLatch.await();
         executorService.shutdown();
-        log.info("count:{}", count);
+        log.info("count:{}", count.get());
     }
 
-    private static void add() {
-        count.incrementAndGet();
-        count.getAndIncrement();
+    private static void test() {
+        if (count.compareAndSet(false, true)) {
+            log.info("compareAndSet success: {}", count.get());
+        }
     }
 
 }
