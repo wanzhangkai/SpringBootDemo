@@ -1,4 +1,4 @@
-package com.pipikai;
+package com.example;
 
 
 import org.junit.Test;
