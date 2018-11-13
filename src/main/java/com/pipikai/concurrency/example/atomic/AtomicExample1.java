@@ -1,4 +1,4 @@
-package com.pipikai.concurrency.example;
+package com.pipikai.concurrency.example.atomic;
 
 import com.pipikai.concurrency.annotation.ThreadSafe;
 import lombok.extern.slf4j.Slf4j;
@@ -11,8 +11,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * 代码模拟并发：
- * CountDownLatch 和 Semaphore的使用
- * 使用synchronized来保证并发
+ * 使用原子类AtomicInteger来保证并发
  *
  * @Author: wanzhangkai
  * @Email: zhangkaiwan@qq.com
@@ -20,13 +19,13 @@ import java.util.concurrent.atomic.AtomicInteger;
  */
 @Slf4j
 @ThreadSafe
-public class CountExample3 {
+public class AtomicExample1 {
 
     public static int clientTolal = 5000;
 
     public static int threadTotal = 200;
 
-    public static int count = 0;
+    public static AtomicInteger count = new AtomicInteger(0);
 
     public static void main(String[] args) throws InterruptedException {
         ExecutorService executorService = Executors.newCachedThreadPool();
@@ -49,8 +48,9 @@ public class CountExample3 {
         log.info("count:{}", count);
     }
 
-    private synchronized static void add() {
-        count++;
+    private static void add() {
+        count.incrementAndGet();
+        count.getAndIncrement();
     }
 
 }

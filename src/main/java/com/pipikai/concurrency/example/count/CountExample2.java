@@ -1,5 +1,6 @@
-package com.pipikai.concurrency.atomic;
+package com.pipikai.concurrency.example.count;
 
+import com.pipikai.concurrency.annotation.NotThreadSafe;
 import com.pipikai.concurrency.annotation.ThreadSafe;
 import lombok.extern.slf4j.Slf4j;
 
@@ -11,6 +12,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * 代码模拟并发：
+ * CountDownLatch 和 Semaphore的使用
  * 使用原子类AtomicInteger来保证并发
  *
  * @Author: wanzhangkai
@@ -19,7 +21,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  */
 @Slf4j
 @ThreadSafe
-public class AtomicExample1 {
+public class CountExample2 {
 
     public static int clientTolal = 5000;
 

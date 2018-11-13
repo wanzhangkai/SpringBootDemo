@@ -1,4 +1,4 @@
-package com.pipikai.concurrency.example;
+package com.pipikai.concurrency.example.count;
 
 import com.pipikai.concurrency.annotation.NotThreadSafe;
 import com.pipikai.concurrency.annotation.ThreadSafe;

@@ -1,33 +1,30 @@
-package com.pipikai.concurrency.atomic;
+package com.pipikai.concurrency.example.count;
 
-import com.pipikai.concurrency.annotation.ThreadSafe;
-import lombok.Getter;
+import com.pipikai.concurrency.annotation.NotThreadSafe;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Semaphore;
-import java.util.concurrent.atomic.AtomicBoolean;
-import java.util.concurrent.atomic.AtomicIntegerFieldUpdater;
 
 /**
- * AtomicBoolean类的使用
- * 只会执行一次
+ * 代码模拟并发：
+ * CountDownLatch 和 Semaphore的使用
  *
  * @Author: wanzhangkai
  * @Email: zhangkaiwan@qq.com
- * @Date: 2018/11/10 11:34
+ * @Date: 2018/11/9 21:37
  */
 @Slf4j
-@ThreadSafe
-public class AtomicExample3 {
+@NotThreadSafe
+public class CountExample1 {
 
     public static int clientTolal = 5000;
 
     public static int threadTotal = 200;
 
-    public static AtomicBoolean count = new AtomicBoolean(false);
+    public static int count = 0;
 
     public static void main(String[] args) throws InterruptedException {
         ExecutorService executorService = Executors.newCachedThreadPool();
@@ -37,7 +34,7 @@ public class AtomicExample3 {
             executorService.execute(() -> {
                 try {
                     semaphore.acquire();
-                    test();
+                    add();
                     semaphore.release();
                 } catch (Exception e) {
                     log.error("exception", e);
@@ -48,12 +45,11 @@ public class AtomicExample3 {
         countDownLatch.await();
         executorService.shutdown();
         log.info("count:{}", count);
+        System.out.println(clientTolal);
     }
 
-    private static void test() {
-        if (count.compareAndSet(false, true)) {
-            log.info("compareAndSet success: {}", count.get());
-        }
+    private static void add() {
+        count++;
     }
 
 }

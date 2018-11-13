@@ -1,4 +1,4 @@
-package com.pipikai.concurrency.atomic;
+package com.pipikai.concurrency.example.atomic;
 
 import com.pipikai.concurrency.annotation.ThreadSafe;
 import lombok.Getter;

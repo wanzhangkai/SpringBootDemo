@@ -1,4 +1,4 @@
-package com.pipikai.concurrency.sync;
+package com.pipikai.concurrency.example.sync;
 
 import lombok.extern.slf4j.Slf4j;
 
