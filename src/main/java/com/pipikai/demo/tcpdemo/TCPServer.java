@@ -1,4 +1,4 @@
-package com.pipikai.demo.TCPDemo;
+package com.pipikai.demo.tcpdemo;
 
 import java.io.*;
 import java.net.ServerSocket;

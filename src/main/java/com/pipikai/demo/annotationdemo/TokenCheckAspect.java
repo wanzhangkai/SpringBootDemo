@@ -1,10 +1,8 @@
-package com.pipikai.demo.annotationDemo;
+package com.pipikai.demo.annotationdemo;
 
 import lombok.extern.slf4j.Slf4j;
-import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Aspect
@@ -12,8 +10,8 @@ import org.springframework.stereotype.Service;
 @Slf4j
 public class TokenCheckAspect {
 
-    //    @Pointcut("execution(public * com.pipikai.demo.annotationDemo.TokenTest.test(..))")
-    @Pointcut("@annotation(com.pipikai.demo.annotationDemo.TokenCheck)")
+    //    @Pointcut("execution(public * com.pipikai.demo.annotationdemo.TokenTest.test(..))")
+    @Pointcut("@annotation(com.pipikai.demo.annotationdemo.TokenCheck)")
     public void handle() {
     }
 

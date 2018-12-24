@@ -1,8 +1,9 @@
 package com.pipikai.controller;
 
 import com.pipikai.aspect.IpCheck;
-import com.pipikai.demo.annotationDemo.TokenTest;
+import com.pipikai.demo.annotationdemo.TokenTest;
 import com.pipikai.pojo.TestObject;
+import com.pipikai.service.TestA;
 import com.pipikai.service.TestService;
 import com.pipikai.utils.HttpResultUtil;
 import lombok.extern.slf4j.Slf4j;
@@ -22,12 +23,19 @@ import java.io.*;
 @RequestMapping(value = "/test")
 public class TestController {
 
+    @Autowired
+    private TestA testA;
 
     @Autowired
     TestService testService;
 
     @Autowired
     TokenTest tokenTest;
+
+    @RequestMapping("/getTest")
+    public String getTest(){
+        return testA.getBName();
+    }
 
     @IpCheck
     @GetMapping(value = "/hello")

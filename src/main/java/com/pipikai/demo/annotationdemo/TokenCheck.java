@@ -1,4 +1,4 @@
-package com.pipikai.demo.annotationDemo;
+package com.pipikai.demo.annotationdemo;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

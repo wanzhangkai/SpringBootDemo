@@ -1,4 +1,4 @@
-package com.pipikai.demo.udpDemo;
+package com.pipikai.demo.udpdemo;
 
 import java.io.IOException;
 import java.net.*;

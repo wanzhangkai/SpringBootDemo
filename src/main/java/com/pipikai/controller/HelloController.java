@@ -1,6 +1,6 @@
 package com.pipikai.controller;
 
-import com.pipikai.demo.annotationDemo.TokenCheck;
+import com.pipikai.demo.annotationdemo.TokenCheck;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
