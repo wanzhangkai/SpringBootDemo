@@ -17,6 +17,7 @@ public class TestA {
     @Autowired
     private TestB b;
 
+
     public String getBName() {
         return b.getName();
     }
