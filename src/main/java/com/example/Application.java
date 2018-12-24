@@ -13,7 +13,6 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @EnableScheduling
 @Slf4j
 public class Application {
-
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
         log.info("Springboot启动完毕");
