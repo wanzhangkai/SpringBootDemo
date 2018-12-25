@@ -1,5 +1,5 @@
 server:
-  port: 8082
+  port: 8083
   servlet:
     context-path:
 
@@ -10,6 +10,10 @@ spring:
     username: root
     password: 123456
     driver-class-name: com.mysql.jdbc.Driver
+  mvc:
+    view:
+      suffix: .html
+      prefix: /
 
 mybatis:
   mapper-locations: classpath:mapper/*.xml
