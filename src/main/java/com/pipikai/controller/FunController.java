@@ -20,6 +20,4 @@ public class FunController {
         return "toLove";
     }
 
-
-
 }
