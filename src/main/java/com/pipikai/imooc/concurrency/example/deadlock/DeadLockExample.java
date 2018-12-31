@@ -30,6 +30,7 @@ public class DeadLockExample implements Runnable {
                 }
             }
         }
+
         if (flag == 0) {
             synchronized (o2) {
                 try {
