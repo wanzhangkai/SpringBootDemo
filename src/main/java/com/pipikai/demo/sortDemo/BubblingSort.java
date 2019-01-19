@@ -24,7 +24,6 @@ public class BubblingSort {
         }
     }
 
-
     public static void main(String[] args) {
         int[] t = {2, 3, 4, 1, 5};
         sort(t);
