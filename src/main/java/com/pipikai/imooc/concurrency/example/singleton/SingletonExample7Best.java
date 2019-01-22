@@ -17,22 +17,13 @@ import lombok.extern.slf4j.Slf4j;
 @Recommend
 public class SingletonExample7Best {
 
-    //私有构造函数
-    private SingletonExample7Best() {
-    }
-
-    //静态的工厂方法
-    public static SingletonExample7Best getInstance() {
-        return Singleton.INSTANCE.getInstance();
-    }
-
-    private enum Singleton {
+    private enum SingletonEnum {
         INSTANCE;
 
         private SingletonExample7Best singleton;
 
         //JVM来保证这个方法绝对只调用一次
-        Singleton() {
+        SingletonEnum() {
             singleton = new SingletonExample7Best();
         }
 
@@ -42,7 +33,7 @@ public class SingletonExample7Best {
     }
 
     public static void main(String[] args) {
-        System.out.println(getInstance().hashCode());
+        System.out.println(SingletonEnum.INSTANCE.getInstance().hashCode());
     }
 
 }
