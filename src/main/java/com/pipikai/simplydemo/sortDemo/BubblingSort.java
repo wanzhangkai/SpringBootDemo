@@ -1,4 +1,4 @@
-package com.pipikai.demo.sortDemo;
+package com.pipikai.simplydemo.sortDemo;
 
 import lombok.extern.slf4j.Slf4j;
 

@@ -1,4 +1,4 @@
-package com.pipikai.demo;
+package com.pipikai.simplydemo;
 
 import java.util.HashSet;
 import java.util.Set;

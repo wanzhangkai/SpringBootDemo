@@ -1,7 +1,7 @@
 package com.pipikai.controller;
 
 import com.pipikai.aspect.IpCheck;
-import com.pipikai.demo.annotationdemo.TokenTest;
+import com.pipikai.simplydemo.annotationdemo.TokenTest;
 import com.pipikai.pojo.TestObject;
 import com.pipikai.service.TestA;
 import com.pipikai.service.TestService;

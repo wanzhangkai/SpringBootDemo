@@ -1,4 +1,4 @@
-package com.pipikai.demo.udpdemo;
+package com.pipikai.simplydemo.udpdemo;
 
 import java.io.IOException;
 import java.net.DatagramPacket;

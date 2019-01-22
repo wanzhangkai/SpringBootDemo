@@ -1,4 +1,4 @@
-package com.pipikai.demo.tcpdemo;
+package com.pipikai.simplydemo.tcpdemo;
 
 import java.io.IOException;
 import java.io.OutputStream;

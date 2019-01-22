@@ -1,4 +1,4 @@
-package com.pipikai.demo.alibabaquestion;
+package com.pipikai.simplydemo.alibabaquestion;
 
 import lombok.extern.slf4j.Slf4j;
 
