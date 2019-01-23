@@ -1,4 +1,4 @@
-package com.pipikai.simplydemo;
+package com.pipikai.simplydemo.inetdemo;
 
 import java.io.*;
 import java.net.InetAddress;

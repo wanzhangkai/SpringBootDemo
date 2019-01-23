@@ -1,4 +1,4 @@
-package com.pipikai.simplydemo;
+package com.pipikai.simplydemo.streamdemo;
 
 import com.pipikai.pojo.TestObject;
 

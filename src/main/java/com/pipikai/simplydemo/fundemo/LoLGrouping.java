@@ -1,4 +1,4 @@
-package com.pipikai.simplydemo;
+package com.pipikai.simplydemo.fundemo;
 
 import java.util.*;
 
