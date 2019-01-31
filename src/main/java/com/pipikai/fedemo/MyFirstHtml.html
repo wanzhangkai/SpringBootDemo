@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="pipikai" content="First Html">
+    <meta http-equiv="refresh" content="30">
+    <title>pipikai</title>
+    <base href="http://www.runoob.com/images/" target="_blank">
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
+    <style type="text/css">
+        body {
+            /*background-color: whitesmoke*/
+        }
+
+        h1 {
+            /*color: red*/
+        }
+
+        p {
+            /*color: blue*/
+        }
+    </style>
+</head>
+
+<body>
+<script>
+    alert("我的第一个 JavaScript");
+</script>
+
+<iframe src="demo_iframe.htm" style="width: 1000px; height: 500px;"></iframe>
+
+<p id="demo">JavaScript Test</p>
+<script>
+    document.write("Hello world!")
+    function myFunction() {
+        document.getElementById("demo").innerHTML = "Hello JavaScript!";
+    }
+    function fun2() {
+        x = document.getElementById("demo")
+        x.style.color = "#ff0000";
+    }
+</script>
+<button type="button" onclick="myFunction()">点我</button>
+<button type="button" onclick="fun2()">点我改颜色</button>
+
+
+<form>
+    First name:<input type="text" name="firstname"><br>
+    Last name:<input type="text" name="lastname"><br>
+    Password:<input type="text" name="password"><br>
+    <input type="radio" name="sex" value="male">Male
+    <input type="radio" name="sex" value="male">feMale
+    <input type="checkbox" name="sex" value="male">18+<br>
+    <input type="submit">
+</form>
+
+<div id="container" style="width: 500px;">
+    <div id="header" style="background-color:#ffa500;">
+        <h1 style="margin-bottom: 0px;">主要网页标题</h1>
+    </div>
+    <div id="menu" style="background-color: #ffd700;height：200px;width:100px;float: left;">
+        <b>菜单</b><br>
+        HTML<br>
+        CSS<br>
+        JavaScript
+    </div>
+    <div id="content" style="background-color: #EEEEEE;height:200px;width:400px;float: left;">
+        内容在这里
+    </div>
+    <div id="footer" style="background-color:cadetblue;clear: both;text-align:center;">
+        版权
+    </div>
+</div>
+
+
+<table border="1">
+    <tr>
+        <th>Header1</th>
+        <th>Header2</th>
+    </tr>
+    <tr>
+        <td>row 1 , cell 1</td>
+        <td>row 1 , cell 2</td>
+    </tr>
+    <tr>
+        <td>row 1 , cell 1</td>
+        <td>row 1 , cell 2</td>
+    </tr>
+</table>
+
+<h4>无序列表：</h4>
+<ul>
+    <li>Coffee</li>
+    <ul>
+        <li>Coff1</li>
+        <li>Coff2</li>
+    </ul>
+    <li>Tea</li>
+    <li>Milk</li>
+    <ol>
+        <li>Coffer1</li>
+        <li>Coffer2</li>
+    </ol>
+</ul>
+
+
+<h1>我的标题</h1>
+<h2>我的标题2</h2>
+<h3>我的标题3</h3>
+<p>我的<br>段落</p>
+<hr>
+<p>另一个段落</p>
+
+<b>qwe</b><br><br>
+<i>斜体文本</i><br><br>
+<code>电脑自动输出</code><br><br>
+这是 <sub> 下标</sub> 和 <sup> 上标</sup>
+
+<p>另一个段落</p>
+<a href="http://baidu.com" target="_blank" style="text-decoration:none">一个链接</a><br>
+<a id="#tips">有用的部分</a>
+<!--<img src="default.htm" width="258" height="39"/>-->
+
+<br>
+
+</body>
+</html>
