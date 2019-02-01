@@ -4,6 +4,7 @@
     <meta charset="UTF-8" name="pipikai" content="First Html">
     <meta http-equiv="refresh" content="30">
     <title>pipikai</title>
+    <script language="javascript" type="text/javascript" src="myScript.js"></script>
     <base href="http://www.runoob.com/images/" target="_blank">
     <link rel="stylesheet" type="text/css" href="mystyle.css">
     <style type="text/css">
@@ -19,29 +20,18 @@
             /*color: blue*/
         }
     </style>
+
 </head>
 
 <body>
-<script>
-    alert("我的第一个 JavaScript");
-</script>
+<p id="demo5"></p>
+<script>fun5()</script>
 
-<iframe src="demo_iframe.htm" style="width: 1000px; height: 500px;"></iframe>
-
-<p id="demo">JavaScript Test</p>
-<script>
-    document.write("Hello world!")
-    function myFunction() {
-        document.getElementById("demo").innerHTML = "Hello JavaScript!";
-    }
-    function fun2() {
-        x = document.getElementById("demo")
-        x.style.color = "#ff0000";
-    }
-</script>
-<button type="button" onclick="myFunction()">点我</button>
-<button type="button" onclick="fun2()">点我改颜色</button>
-
+<h1>我的 Web 页面</h1>
+<p id="demo">一个段落。</p>
+<button type="button" onclick="myFunction()">点击这里</button>
+<p><b>注释：</b>myFunction 保存在名为 "myScript.js" 的外部文件中。</p>
+<script>fun4()</script>
 
 <form>
     First name:<input type="text" name="firstname"><br>
