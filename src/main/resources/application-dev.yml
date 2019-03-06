@@ -12,8 +12,17 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
   mvc:
     view:
-      suffix: .html
-      prefix: /
+      suffix:
+  thymeleaf:
+    mode: LEGACYHTML5
+    encoding: UTF-8
+    cache: false
+    servlet:
+      content-type: text/html
+#  mvc:
+#    view:
+#      suffix: .html
+#      prefix: /
 
 mybatis:
   mapper-locations: classpath:mapper/*.xml
@@ -36,3 +45,4 @@ mybatis:
 #    reasonable: true
 #    supportMethodsArguments: true
 #    params: count=countSql
+
