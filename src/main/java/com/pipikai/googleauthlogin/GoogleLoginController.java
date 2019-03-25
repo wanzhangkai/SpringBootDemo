@@ -65,6 +65,7 @@ public class GoogleLoginController {
     @RequestMapping(value = "/GoogleUserInfo")
     @ResponseBody
     public static Object Login(HttpServletRequest request) {
+
         String code = request.getParameter("code");
         System.out.println("GoogleUserInfo: " + code);
 
